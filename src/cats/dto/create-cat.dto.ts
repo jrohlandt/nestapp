@@ -2,7 +2,13 @@ import { IsNumber, IsString } from 'class-validator';
 
 export class CreateCatDto {
   @IsString()
-  name: string;
+  firstName: string;
+
+  @IsString()
+  lastName: string;
+
+  @IsString()
+  nickname: string;
 
   @IsNumber()
   age: number;
