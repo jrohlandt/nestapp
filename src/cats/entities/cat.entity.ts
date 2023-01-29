@@ -11,7 +11,7 @@ export class Cat {
   @Column()
   lastName: string;
 
-  @Column()
+  @Column({ default: '' })
   nickname: string;
 
   @Column({ default: 0 })

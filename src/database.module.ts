@@ -16,7 +16,7 @@ import { Cat } from './cats/entities/cat.entity';
         password: configService.get('POSTGRES_PASSWORD'),
         database: configService.get('POSTGRES_DB'),
         entities: [Cat, __dirname + '/../**/*.entity.ts'],
-        synchronize: true,
+        synchronize: false,
       }),
     }),
   ],
