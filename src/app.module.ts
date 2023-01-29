@@ -19,6 +19,7 @@ import { CatsModule } from './cats/cats.module';
         POSTGRES_PASSWORD: Joi.string().required(),
         POSTGRES_DB: Joi.string().required(),
         PORT: Joi.number(),
+        SYNC_DB_SCHEMA: Joi.boolean().required(),
       }),
     }),
     DatabaseModule,

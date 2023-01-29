@@ -8,23 +8,23 @@ services:
     volumes:
       - /data/postgres:/data/postgres
     env_file:
-      - docker.env
+      - .env
     networks:
       - uuu_nestjs
 
-  pgadmin:
-    links:
-      - postgres:postgres
-    container_name: pgadmin
-    image: dpage/pgadmin4
-    ports:
-      - '8080:80'
-    volumes:
-      - /data/pgadmin:/root/.pgadmin
-    env_file:
-      - docker.env
-    networks:
-      - uuu_nestjs
+  # pgadmin:
+  #   links:
+  #     - postgres:postgres
+  #   container_name: pgadmin
+  #   image: dpage/pgadmin4
+  #   ports:
+  #     - '8080:80'
+  #   volumes:
+  #     - /data/pgadmin:/root/.pgadmin
+  #   env_file:
+  #     - docker.env
+  #   networks:
+  #     - uuu_nestjs
 
 networks:
   uuu_nestjs:
